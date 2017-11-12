@@ -6,7 +6,7 @@ module.exports = [
     entry: __dirname + "/src/index.jsx",
     output: {
       path: __dirname + '/dist',
-      filename: 'bundel.js'
+      filename: 'bundle.js'
     },
     module: {
       rules: [
@@ -15,7 +15,7 @@ module.exports = [
           exclude: /node_modules/,
           loader: "babel-loader",
           options:{
-            preserts: ['react', 'es2015']
+            presets: ['react', 'es2015']
           }
         },
       ]
@@ -48,7 +48,7 @@ module.exports = [
       ]
     },
     plugins: [
-      new ExtendedAPIPlugin('[name].css')
+      new ExtractTextPlugin('[name].css')
     ],
   },
 ];
